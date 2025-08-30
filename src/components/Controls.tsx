@@ -86,7 +86,7 @@ export default function Controls({
         <label className="inline-flex items-center cursor-pointer">
           <input type="checkbox" className="sr-only peer" checked={darkMode} onChange={e => setDarkMode(e.target.checked)} />
           <div className="w-10 h-5 bg-gray-300 rounded-full peer-checked:bg-zinc-800 relative transition">
-            <div className="absolute top-0.5 left-0.5 w-4 h-4 bg-white rounded-full transition-all peer-checked:translate-x-5"></div>
+            <div className={`absolute top-0.5 ${darkMode ? 'left-5' : 'left-0.5'} w-4 h-4 bg-white rounded-full transition-all peer-checked:translate-x-5`}></div>
           </div>
         </label>
       </div>
